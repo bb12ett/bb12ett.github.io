@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - PaperPop: Toddler Coloring Book | bb12ett</title>
+    <title>Privacy Policy - Zephyr: Weather | bb12ett</title>
     <link rel="icon" type="image/jpeg" href="/assets/logo.jpg">
     <style>
         :root {
@@ -72,6 +72,12 @@
             font-size: 18px;
             font-weight: 800;
             color: var(--text-heading);
+        }
+
+        .nav-links-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
         .nav-back {
@@ -159,13 +165,13 @@
         }
 
         .callout {
-            background: rgba(34, 211, 238, 0.08);
+            background: rgba(0, 210, 255, 0.06);
             border-left: 4px solid var(--primary-cyan);
+            border-radius: 0 10px 10px 0;
             padding: 16px 20px;
-            border-radius: 0 12px 12px 0;
-            margin: 20px 0;
-            font-size: 14px;
-            color: #E0F2FE;
+            margin-bottom: 28px;
+            font-size: 14.5px;
+            line-height: 1.6;
         }
 
         .callout strong {
@@ -179,31 +185,30 @@
             font-size: 18px;
             font-weight: 700;
             color: var(--text-heading);
-            margin-top: 28px;
-            margin-bottom: 10px;
+            margin-top: 32px;
+            margin-bottom: 12px;
             letter-spacing: -0.3px;
         }
 
         p {
-            margin-bottom: 12px;
+            margin-bottom: 14px;
             font-size: 15px;
             color: var(--text-body);
         }
 
         ul {
-            margin: 10px 0 14px 22px;
+            margin: 12px 0 16px 22px;
             font-size: 15px;
             color: var(--text-body);
         }
 
         li {
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         a {
             color: var(--primary-cyan);
             text-decoration: none;
-            font-weight: 600;
         }
 
         a:hover {
@@ -211,8 +216,8 @@
         }
 
         footer {
-            margin-top: 36px;
-            padding-top: 20px;
+            margin-top: 40px;
+            padding-top: 24px;
             border-top: 1px solid var(--border-subtle);
             font-size: 13px;
             color: var(--text-muted);
@@ -222,18 +227,19 @@
 </head>
 <body>
 
+    <!-- Sticky Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="/" class="brand-link">
                 <img src="/assets/logo.jpg" alt="bb12ett Logo" class="brand-avatar">
                 <span class="brand-name">bb12ett</span>
             </a>
-            <div style="display: flex; gap: 8px;">
+            <div class="nav-links-right">
                 <a href="/privacy.html" class="nav-back">
                     <span>🛡️</span> All Policies
                 </a>
                 <a href="/" class="nav-back">
-                    <span>←</span> Home
+                    <span>←</span> Portfolio
                 </a>
             </div>
         </div>
@@ -243,72 +249,65 @@
         <div class="policy-card">
             
             <div class="header-row">
-                <img src="/assets/paperpop-icon.png" alt="PaperPop Icon" class="app-icon">
+                <img src="/assets/zephyr-icon.png" alt="Zephyr Icon" class="app-icon">
                 <div>
                     <div class="badge-box">
-                        <span>🛡️</span> Google Play Families Policy & COPPA Compliant
+                        <span>🛡️</span> Open, Private & Ad-Free
                     </div>
                     <h1>Privacy Policy</h1>
-                    <div style="font-size: 14px; color: var(--primary-cyan); font-weight: 600;">PaperPop: Toddler Coloring Book</div>
+                    <div style="font-size: 14px; color: var(--primary-cyan); font-weight: 600;">Zephyr: Weather</div>
                 </div>
             </div>
 
             <div class="subtitle">
-                Package: <code>com.bb12ett.paperpop.coloring</code> • Published by <strong>bb12ett</strong> (Brett)<br>
+                Package: <code>org.breezyweather</code> • Published by <strong>bb12ett</strong> (Brett)<br>
                 Effective Date: September 2026
             </div>
 
             <div class="callout">
-                <strong>Our Commitment to Families & Young Children:</strong>
-                PaperPop was built from the start with privacy as an absolute priority. We do not collect, store, transmit, or sell any personal data, device identifiers, or analytics logs. The app functions 100% offline.
+                <strong>Our Commitment to Your Privacy:</strong>
+                Zephyr does not collect, harvest, profile, transmit, or sell any personal data, usage metrics, or advertising identifiers. The application operates with transparent data usage and zero third-party telemetry.
             </div>
 
             <h2>1. Information We Do Not Collect</h2>
-            <p>PaperPop does <strong>not</strong> collect or process any personal information. Specifically:</p>
+            <p>Zephyr does <strong>not</strong> collect or store your personal information on any server operated by bb12ett. Specifically:</p>
             <ul>
-                <li>No names, email addresses, phone numbers, or user accounts</li>
-                <li>No GPS location or IP geolocation data</li>
-                <li>No device identifiers or advertising identifiers (such as Google Advertising ID / GAID)</li>
-                <li>No user behavior telemetry, event tracking, or analytics</li>
-                <li>No voice recordings, audio clips, or biometric data</li>
+                <li>No account registration, user logins, names, or email addresses</li>
+                <li>No device identifiers, IMEI, or Google Advertising IDs (GAID)</li>
+                <li>No analytics telemetry, behavioral tracking, or session recording SDKs</li>
+                <li>No contact lists, biometric data, microphone recordings, or browsing history</li>
             </ul>
 
-            <h2>2. Children's Privacy (COPPA & Google Play Families Policy)</h2>
-            <p>PaperPop complies fully with the <strong>Children's Online Privacy Protection Act (COPPA)</strong>, the UK Data Protection Act, the European General Data Protection Regulation (GDPR), and Google Play's strict Families Policy:</p>
+            <h2>2. Location Data & Permissions</h2>
+            <p>Zephyr requires weather data for specific locations to function. Location access is handled with strict privacy controls:</p>
             <ul>
-                <li>No personal data is ever requested or gathered from children under the age of 13 (or under 16 in the EEA/UK).</li>
-                <li>The application operates entirely without user accounts or cloud syncing.</li>
-                <li>All external outbound links (such as this Privacy Policy or support email) are protected behind an adult-only <strong>Parental Gate</strong> (an arithmetic problem) to prevent unaccompanied external navigation.</li>
+                <li><strong>Optional Location Permission:</strong> You may grant approximate or precise location permissions so the app can fetch local weather forecasts and radar for your current position.</li>
+                <li><strong>Manual Alternative:</strong> Location permissions are completely optional. You can deny location access and search for and select cities manually without losing app capabilities.</li>
+                <li><strong>Direct Queries:</strong> When location access is granted, coordinates are sent directly and solely to your selected weather data source to retrieve forecast data. Your coordinates are never logged or transmitted to bb12ett or any ad network.</li>
             </ul>
 
-            <h2>3. Device Permissions & Camera Usage</h2>
-            <p>PaperPop requests only the bare minimum Android permissions necessary to support its drawing and coloring features:</p>
+            <h2>3. Third-Party Weather APIs</h2>
+            <p>Zephyr relies on weather provider APIs (such as Open-Meteo, MET Norway, OpenWeatherMap, or other user-selected sources) to supply forecasts and radar layers:</p>
             <ul>
-                <li><strong>Camera / Photos Access:</strong> Used exclusively to allow a parent or toddler to take a picture of a physical paper drawing or select an existing coloring page to convert it into a digital line outline.</li>
-                <li><strong>100% On-Device Processing:</strong> All image processing, edge detection algorithms, and outline thresholding occur entirely in the device's local memory using on-device computer vision. Camera frames and pictures are <strong>never</strong> transmitted to any external server, cloud platform, or third party.</li>
-                <li><strong>Local Storage:</strong> Saved artworks and coloring pages are saved solely into the app's sandboxed local storage on your device.</li>
+                <li>API calls connect directly from your device to the selected weather provider.</li>
+                <li>You have complete control in the app settings over which weather sources you use. Please consult the respective privacy policies of your chosen weather providers.</li>
             </ul>
 
-            <h2>4. Zero Advertising & Zero Third-Party SDKs</h2>
-            <p>PaperPop contains <strong>zero third-party advertisements</strong> and <strong>zero tracking libraries</strong>:</p>
+            <h2>4. Optional Features & On-Device Processing</h2>
             <ul>
-                <li>No banner ads, interstitial pop-ups, rewarded videos, or promotional links.</li>
-                <li>No analytics SDKs, Meta/Facebook SDKs, Firebase Analytics, or cross-app tracking beacons.</li>
+                <li><strong>App Updates:</strong> If the "Check for app updates" feature is enabled, Zephyr queries the public GitHub API at most once every 24 hours to check for new releases. Version comparison occurs strictly on your local device, and no personal data is sent to GitHub.</li>
+                <li><strong>Icon Packs:</strong> If you use custom weather icon packs, Zephyr inspects installed package names against an explicit list of known icon packs. No list of your installed apps is ever saved or transmitted.</li>
+                <li><strong>Local Storage:</strong> All saved locations, favorites, custom widget configurations, and cached weather data are stored strictly within the sandboxed local storage of your device.</li>
             </ul>
 
-            <h2>5. In-App Purchases (PaperPop Pro)</h2>
-            <p>PaperPop offers an optional, one-time digital purchase to unlock the full template library and unlimited paper scans:</p>
-            <ul>
-                <li>All purchase processing is handled directly by <strong>Google Play In-App Billing</strong>.</li>
-                <li>The developer (bb12ett) never sees, accesses, receives, or stores your credit card details or billing address.</li>
-                <li>The purchase screen is gated behind the adult Parental Gate.</li>
-            </ul>
+            <h2>5. Zero Advertising & Zero Tracking</h2>
+            <p>Zephyr contains <strong>no advertisements</strong> of any kind (no banners, popups, or rewarded ads) and embeds <strong>no telemetry SDKs</strong> (no Firebase Analytics, Google Analytics, or Facebook SDKs).</p>
 
-            <h2>6. Data Security and Deletion</h2>
-            <p>Because no personal data is collected or transmitted remotely, no personal data is retained on external servers. All saved pictures, color palettes, and cached templates remain strictly on your physical Android device. You can erase all application data at any time through Android Settings or by uninstalling the app.</p>
+            <h2>6. Data Retention and Deletion</h2>
+            <p>Because no personal information or location history is ever gathered or stored by bb12ett servers, there is no remote data to retain. You can delete all locally cached cities, forecasts, and settings at any time by clearing the app data in Android Settings or uninstalling the app.</p>
 
             <h2>7. Contact Us</h2>
-            <p>If you have any questions or feedback regarding this Privacy Policy, please feel free to reach out:</p>
+            <p>If you have any questions or suggestions regarding this Privacy Policy or Zephyr, please contact us:</p>
             <ul>
                 <li><strong>Developer:</strong> bb12ett (Brett)</li>
                 <li><strong>Email:</strong> <a href="mailto:support@bb12ett.uk">support@bb12ett.uk</a></li>
