@@ -1,0 +1,419 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Disclaimer & Terms of Use - HABit | bb12ett</title>
+    <meta name="description" content="Financial Disclaimer and Terms of Use for HABit - Household Budget Planner for Home Assistant.">
+    <link rel="icon" type="image/jpeg" href="/assets/logo.jpg">
+    <style>
+        :root {
+            --bg-base: #070D1B;
+            --bg-card: #0F172A;
+            --border-subtle: rgba(56, 189, 248, 0.15);
+            --primary-cyan: #00D2FF;
+            --primary-teal: #06D6A0;
+            --accent-amber: #F59E0B;
+            --accent-red: #EF4444;
+            --text-heading: #F8FAFC;
+            --text-body: #CBD5E1;
+            --text-muted: #94A3B8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-body);
+            line-height: 1.7;
+            padding: 0 0 60px 0;
+            background-image: 
+                radial-gradient(circle at 10% 10%, rgba(0, 210, 255, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 70%, rgba(6, 214, 160, 0.06) 0%, transparent 45%);
+            background-attachment: fixed;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(7, 13, 27, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 14px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .brand-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            border: 1px solid var(--primary-cyan);
+        }
+
+        .brand-name {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--text-heading);
+        }
+
+        .nav-links-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-back {
+            color: var(--primary-cyan);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(34, 211, 238, 0.08);
+            border: 1px solid rgba(34, 211, 238, 0.25);
+            padding: 6px 14px;
+            border-radius: 9999px;
+            transition: all 0.15s ease;
+        }
+
+        .nav-back:hover {
+            background: rgba(34, 211, 238, 0.18);
+        }
+
+        /* Container */
+        .container {
+            max-width: 860px;
+            margin: 32px auto 0 auto;
+            padding: 0 20px;
+        }
+
+        .policy-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 650px) {
+            .policy-card { padding: 24px 18px; border-radius: 16px; }
+        }
+
+        .header-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .app-icon {
+            width: 76px;
+            height: 76px;
+            border-radius: 18px;
+            border: 1.5px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+            flex-shrink: 0;
+            background: #0B132B;
+        }
+
+        .badge-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--accent-amber);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            padding: 5px 12px;
+            border-radius: 9999px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--text-heading);
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+        }
+
+        .subtitle {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        /* Alert Warning Box */
+        .alert-warning {
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-left: 4px solid var(--accent-red);
+            border-radius: 0 12px 12px 0;
+            padding: 18px 22px;
+            margin-bottom: 28px;
+            font-size: 14.5px;
+            line-height: 1.6;
+        }
+
+        .alert-warning strong {
+            color: #FCA5A5;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-top: 32px;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            font-size: 15px;
+            color: var(--text-body);
+        }
+
+        ul, ol {
+            margin: 12px 0 16px 22px;
+            font-size: 15px;
+            color: var(--text-body);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .checkbox-card {
+            background: rgba(7, 13, 27, 0.7);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin: 16px 0;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 10px;
+            font-size: 14.5px;
+            color: var(--text-heading);
+        }
+
+        .checkbox-item:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: var(--primary-cyan);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-subtle);
+            margin: 28px 0;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-subtle);
+            font-size: 13px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="brand-link">
+                <img src="/assets/logo.jpg" alt="bb12ett Logo" class="brand-avatar">
+                <span class="brand-name">bb12ett</span>
+            </a>
+            <div class="nav-links-right">
+                <a href="/habit/privacy.html" class="nav-back">
+                    <span>🛡️</span> Privacy Policy
+                </a>
+                <a href="/privacy.html" class="nav-back">
+                    <span>🛡️</span> All Policies
+                </a>
+                <a href="/" class="nav-back">
+                    <span>←</span> Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="policy-card">
+            
+            <div class="header-row">
+                <img src="/assets/habit-icon.png" alt="HABit Logo" class="app-icon">
+                <div>
+                    <div class="badge-box">
+                        <span>⚖️</span> Legal & Financial Terms
+                    </div>
+                    <h1>Financial Disclaimer & Terms of Use</h1>
+                    <div style="font-size: 14px; color: var(--primary-cyan); font-weight: 600;">HABit — Household Budget Planner (Home Assistant Add-on)</div>
+                </div>
+            </div>
+
+            <div class="subtitle">
+                <strong>Version:</strong> 1.1.0 • <strong>Effective Date:</strong> September 2026 • <strong>License:</strong> GNU Affero General Public License v3.0 (AGPLv3)
+            </div>
+
+            <p>
+                Please review and accept our financial disclaimer and terms of use to access HABit. By downloading, installing, accessing, browsing, or using HABit, you acknowledge and agree that your use of this software is completely voluntary and <strong>strictly at your own risk</strong>.
+            </p>
+
+            <hr>
+
+            <div class="alert-warning">
+                <strong>⚠️ Warning: Software May Contain Calculation Bugs & Errors</strong><br><br>
+                <strong>This software is provided "as is" and "with all faults".</strong> Calculations, pacing algorithms, Safe-to-Spend allowances, cashflow projections, and bank balances may contain mathematical errors, programming bugs, rounding anomalies, or logic defects. <strong>Never make spending, transfer, or payment decisions based on figures shown in this app without independently verifying them in your official bank account.</strong>
+            </div>
+
+            <hr>
+
+            <h2>1. Personal Budgeting & Forecasting Utility Only — No Regulated Advice</h2>
+            <p>
+                HABit is an independent, self-hosted personal budgeting, forecasting, and cashflow tracking utility for Home Assistant. It is provided strictly for personal organizational and estimation reference. <strong>HABit does not provide regulated financial, investment, banking, credit, tax, or legal advice.</strong> Neither the authors nor contributors are registered financial advisers, chartered accountants, certified planners, or regulated financial entities.
+            </p>
+
+            <hr>
+
+            <h2>2. No Guarantee of Mathematical Accuracy — Potential Bugs & Flaws</h2>
+            <p>
+                All financial metrics generated by this application—including Safe-to-Spend allowances, daily burn rates, Sunday closing targets, payday cycle calculations, bank holiday shift schedules, credit card auto-pay projections, sinking fund distributions, and net worth trajectories—are algorithmic approximations based on historical data, user inputs, and third-party feeds.
+            </p>
+            <p>
+                <strong>The author makes NO WARRANTY OR GUARANTEE that any calculation, projection, or figure is accurate, complete, reliable, timely, or fit for any purpose.</strong> Calculations do not guarantee future cash availability, solvency, or actual account balances. Software bugs, logic flaws, edge cases, formula errors, and third-party feed discrepancies may cause projected figures to differ materially from reality.
+            </p>
+
+            <hr>
+
+            <h2>3. Sole User Responsibility & Independent Bank Verification</h2>
+            <p>You acknowledge and agree that you remain exclusively and solely responsible for:</p>
+            <ul>
+                <li>Independently verifying all actual account balances, cleared funds, and credit card limits directly with your official financial institutions before committing to purchases or transfers.</li>
+                <li>Ensuring sufficient cleared funds are available in your accounts prior to the processing dates of scheduled direct debits, standing orders, recurring subscriptions, and bill commitments.</li>
+                <li>Independently tracking credit card statement due dates, minimum payment requirements, and interest charges.</li>
+                <li>Preventing unarranged overdraft fees, returned payment charges, late payment penalties, and interest charges.</li>
+            </ul>
+
+            <hr>
+
+            <h2>4. Disclaimer of All Warranties ("As-Is" Provision)</h2>
+            <p>
+                To the maximum extent permitted by applicable law, this software is provided strictly on an <strong>"as is"</strong> and <strong>"as available"</strong> basis without warranties of any kind, whether express, implied, statutory, or otherwise, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, non-infringement, quiet enjoyment, or system accuracy.
+            </p>
+
+            <hr>
+
+            <h2>5. Full Exclusion of Liability & Hold Harmless (Ironclad Waiver)</h2>
+            <p>
+                <strong>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE AUTHOR, DEVELOPERS, MAINTAINERS, OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES WHATSOEVER</strong>, INCLUDING WITHOUT LIMITATION:
+            </p>
+            <ul>
+                <li>Unarranged overdraft fees, returned payment charges, unpaid direct debit penalties, or banking penalty fees.</li>
+                <li>Late payment penalties, default notices, damaged credit ratings, or reduced credit scores.</li>
+                <li>Credit card interest charges, penalty APRs, or financing charges.</li>
+                <li>Loss of funds, lost savings, loss of profits, financial distress, or business interruption.</li>
+                <li>Any loss, cost, fee, or damage arising directly or indirectly out of the use of, or inability to use, this application, or any reliance placed upon any calculation, figure, notification, or forecast provided by this software, <strong>EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, AND EVEN IF CAUSED DIRECTLY OR INDIRECTLY BY A PROVABLE SOFTWARE BUG, CALCULATION FLAW, LOGIC ERROR, OR CODING MISTAKE IN THE APPLICATION.</strong></li>
+            </ul>
+            <p>
+                By using HABit, you expressly agree to <strong>defend, indemnify, and hold completely harmless</strong> the author, developers, and contributors from and against any and all claims, liabilities, losses, damages, costs, or expenses (including legal fees) arising out of or in connection with your use of this software.
+            </p>
+
+            <hr>
+
+            <h2>6. Data Loss, Corruption, Local Storage & Backup Responsibility</h2>
+            <p>
+                HABit operates locally within your Home Assistant environment. The author accepts zero responsibility for any loss of data, corrupted databases, accidental factory resets, failed automated backups, or cloud synchronization interruptions (including Microsoft OneDrive or Google Drive). You are solely responsible for routinely exporting, testing, and securing offline backups of your financial data.
+            </p>
+
+            <hr>
+
+            <h2>7. Open Banking & Third-Party Services</h2>
+            <p>
+                Open Banking connectivity (via GoCardless, Nordigen, or other aggregators) and bank statement parsers are third-party services provided solely for user convenience. The author bears no responsibility for third-party API availability, data accuracy, expired consent tokens, missing transactions, duplicate records, or network transmission errors. All credentials and access tokens stored on your Home Assistant instance remain your sole responsibility to secure.
+            </p>
+
+            <hr>
+
+            <h2>8. Entirely at Your Own Risk & Sole Remedy</h2>
+            <p>
+                Your use of this application is completely voluntary and <strong>entirely at your own risk</strong>. If you do not agree unconditionally with every term, warranty disclaimer, and liability exclusion set forth herein, <strong>your sole and exclusive remedy is to immediately discontinue using and delete the application</strong>.
+            </p>
+
+            <hr>
+
+            <h2>9. Future Revisions & Re-Acceptance</h2>
+            <p>
+                As calculation methodologies, features, and regulations evolve, these terms may be updated. When updated, re-acceptance of the revised terms will be required to maintain access to the application.
+            </p>
+
+            <hr>
+
+            <h2>Mandatory In-App Acceptance Checkboxes</h2>
+            <p>Users of the application must explicitly agree to the following two statements before access is granted:</p>
+            <div class="checkbox-card">
+                <div class="checkbox-item">
+                    <span>☑️</span>
+                    <div><strong>"I understand that HABit may contain calculation errors or software bugs, does not guarantee accuracy, and is not financial advice."</strong></div>
+                </div>
+                <div class="checkbox-item" style="margin-top: 12px;">
+                    <span>☑️</span>
+                    <div><strong>"I use HABit ENTIRELY AT MY OWN RISK, accept sole responsibility for all financial decisions and data backups, and agree to hold the developers completely harmless from any liability or loss."</strong></div>
+                </div>
+            </div>
+
+            <hr>
+
+            <p style="font-size: 13.5px; color: var(--text-muted);">
+                <em>This Financial Disclaimer & Terms of Use supplements the <a href="https://github.com/bb12ett/HABit/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">GNU Affero General Public License v3.0 (AGPLv3)</a>.</em>
+            </p>
+
+            <footer>
+                &copy; 2026 bb12ett (Brett). All rights reserved. • <a href="/habit/privacy.html">HABit Privacy Policy</a> • <a href="/privacy.html">All Privacy Policies</a> • <a href="/">Home</a> • <a href="https://bb12ett.uk">bb12ett.uk</a>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>
